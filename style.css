@@ -51,6 +51,11 @@ body{
  background-color: rgb(227, 207, 207);
  color: #5c0e0e;
 }
+@media(max-width:486px){
+  .container{
+      width: 25rem;
+  }
+}
 img{
    width: 150px;
    height: 150px;
