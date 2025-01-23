@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <!-- Link Cascading style sheet -->
+    <link rel="stylesheet" href="style.css">
+
+     <!-- Link Java script -->
+     <script src="script.js" defer type="module"></script>
+
+     <!-- Link font awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   <header class="header-sec">
+    <h1 id="name">Pizza Master</h1>
+    <button id="help-btn">
+     <a href="Help section/help.html"> Help </a>
+    </button>
+    <button id="cart-btn">Cart <i class="fa-solid fa-cart-shopping"></i></button>
+   </header>
+  
+  <div id="menu-data">
+
+  </div>
+<div id="cart"></div>
+
+<div class="cart-form" id="cart-form">
+  <div>
+    <button class="close-btn" id="close-btn">X</button>
+  </div>
+    <form class="form-section">
+      <h3 id="payment-heading">Make a payment</h3>
+
+      <label for="fullname">Fullname</label>
+      <input type="text" id="fullname"  placeholder="Enter your name" name="fullname" required>
+    
+      <label for="email">Enter your Email address</label>
+      <input type="text" id="email" placeholder="Enter your Email" name="email" required>
+
+      <label for="card">Card details for payment</label>
+      <input type="text" id="card" placeholder="Enter your card number" name="card" required>
+
+      <button class="payment-button" id="payment-button">Confirm payment</button>
+    </form>
+</div>
+<div class="order-cnfrm" id="order-cnfrm">
+  <h2>✶ORDER CONFIRMED</h2>
+   <p> Sit back and relax your order will soon come to your door step</p>
+</div>
+
+</body>
+</html>
