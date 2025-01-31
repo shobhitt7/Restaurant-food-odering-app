@@ -42,8 +42,8 @@ function updateCart() {
         <div class="cart-item">
           <img src="${item.image}" class="cart-image" alt="${item.name}">
           <div class='details'>
-            <p>⚫ ITEM: ${item.name}</p>
-            <p>➡ Price: ₹${item.price}</p>
+            <p>⚫ ITEM:${item.name}</p>
+            <p>➡ Price:₹${item.price}</p>
             <button class="remove-button" data-index="${index}">Remove</button>
           </div>
         </div>`
