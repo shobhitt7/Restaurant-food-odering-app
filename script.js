@@ -71,7 +71,7 @@ function updateCart() {
     event.preventDefault()
    orderMessage.style.display = 'block'
 
-   // back to home
+  //  back to home
    setTimeout(()=>{
     orderMessage.style.display = 'none'
     cartForm.style.display = 'none'
@@ -108,7 +108,7 @@ cartButton.addEventListener("click", () => {
   cartContainer.scrollIntoView({ behavior: "smooth" });
 });
 
-// close cart form
+// // close cart form
 closeBtn.addEventListener("click", () => {
   cartForm.style.display = "none";
 });
