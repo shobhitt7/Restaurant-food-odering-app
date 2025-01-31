@@ -1,7 +1,7 @@
-// Importing menu data
+// importing menu data
 import { menuData } from "./data.js";
 
-// DOM elements
+// dom elements
 const cartContainer = document.getElementById("cart");
 const divData = document.getElementById("menu-data");
 const cartButton = document.getElementById("cart-btn");
@@ -10,11 +10,11 @@ const closeBtn = document.getElementById("close-btn");
 
 const cart = [];
 
-// Render menu items
+// render menu items
 divData.innerHTML = menuData
   .map(
     (item) => `
-      <div class='container'>
+      <div class='food-container container'>
         <div class='img-div'>
           <img src="${item.image}" alt="${item.name}">
         </div>
@@ -25,11 +25,11 @@ divData.innerHTML = menuData
         <div class='buy-btn'>
           <button class='buy-button' data-id="${item.id}">Buy</button>
         </div>
-      </div>`
+     </div>`
   )
   .join("");
 
-// Update cart display
+// update cart display
 function updateCart() {
   if (cart.length === 0) {
     cartContainer.innerHTML = "<p class='empty-msg'>The cart is empty.</p>";
@@ -52,7 +52,7 @@ function updateCart() {
 
   const total = cart.reduce((sum, item) => sum + item.price, 0);
 
-   // Total price
+   // total price
   cartContainer.innerHTML = `
     ${cartItemsHTML}
     <p class='total-price'><strong>Total: ₹${total}</strong></p>
@@ -71,7 +71,7 @@ function updateCart() {
     event.preventDefault()
    orderMessage.style.display = 'block'
 
-   // Back to home
+   // back to home
    setTimeout(()=>{
     orderMessage.style.display = 'none'
     cartForm.style.display = 'none'
@@ -81,7 +81,7 @@ function updateCart() {
    })
 }
 
-// Add item to cart
+// add item to cart
 divData.addEventListener("click", (event) => {
   if (event.target.classList.contains("buy-button")) {
     const productId = parseInt(event.target.dataset.id);
@@ -94,7 +94,7 @@ divData.addEventListener("click", (event) => {
   }
 });
 
-// Remove item from cart
+// remove item from cart
 cartContainer.addEventListener("click", (event) => {
   if (event.target.classList.contains("remove-button")) {
     const index = parseInt(event.target.dataset.index);
@@ -103,12 +103,12 @@ cartContainer.addEventListener("click", (event) => {
   }
 });
 
-// Smooth scroll to cart
+// smooth scroll to cart
 cartButton.addEventListener("click", () => {
   cartContainer.scrollIntoView({ behavior: "smooth" });
 });
 
-// Close cart form
+// close cart form
 closeBtn.addEventListener("click", () => {
   cartForm.style.display = "none";
 });
