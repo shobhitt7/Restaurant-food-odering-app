@@ -84,23 +84,24 @@ function updateCart() {
 // add item to cart
 divData.addEventListener("click", (event) => {
   if (event.target.classList.contains("buy-button")) {
+    // Vibrate first (immediately after click)
+    if ("vibrate" in navigator) {
+      navigator.vibrate(200);
+    }
+
     const productId = parseInt(event.target.dataset.id);
     const product = menuData.find((item) => item.id === productId);
 
     if (product) {
       cart.push(product);
       updateCart();
-
-      // Vibrate for 200 milliseconds
-      if ("vibrate" in navigator) {
-        navigator.vibrate(200);
-      }
-
-      // Show alert
+      
+      // Show alert after vibration
       alert("Item added to cart!");
     }
   }
 });
+
 
 
 // remove item from cart
