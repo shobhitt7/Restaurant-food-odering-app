@@ -46,6 +46,7 @@ header{
  display: flex;
  border: 3px solid rgba(23, 15, 4, 0.921);
  width: 70%;
+ max-width: 600px;
  position: relative;
  background-color: rgb(227, 207, 207);
  color: #5c0e0e;
@@ -95,11 +96,9 @@ img{
     font-weight: bold;
     cursor: pointer;
 }
-.buy-button:hover{
-    background-color: rgb(163, 180, 133);
-    color: black;
-}
+
 .buy-button:active {
+    background-color: darkred;
     transform: scale(1.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
@@ -115,6 +114,55 @@ img{
     position: relative;
 }
 
+
+/* .remove-button{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .remove-button{
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+  }
+  
+  .remove-button span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  .remove-button:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff003b;
+    transition: all .35s;
+  }
+  
+  .remove-button:hover{
+    color: #fff;
+  }
+  
+  .remove-button:hover:after{
+    width: 100%;
+  } */
+
+
 .remove-button{
     position: absolute;
     right: 12px;
@@ -127,8 +175,8 @@ img{
     font-weight: bold;
     cursor: pointer;;
 }
-.remove-button:hover{
-background-color: rgb(190, 75, 75);
+.remove-button:active{
+background-color: rgb(244, 14, 14);
 }
 
 .cart-image{
