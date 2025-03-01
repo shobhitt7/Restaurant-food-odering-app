@@ -90,9 +90,18 @@ divData.addEventListener("click", (event) => {
     if (product) {
       cart.push(product);
       updateCart();
+
+      // Vibrate for 200 milliseconds
+      if ("vibrate" in navigator) {
+        navigator.vibrate(200);
+      }
+
+      // Show alert
+      alert("Item added to cart!");
     }
   }
 });
+
 
 // remove item from cart
 cartContainer.addEventListener("click", (event) => {
