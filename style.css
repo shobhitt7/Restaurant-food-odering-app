@@ -1,12 +1,12 @@
 
 body{
-   background-color: #4a7653;
+   background-color: #c7d5d6;
    margin: 0;
    padding: 0;
    overflow-x: hidden;
 }
 header{
-    background-color: rgb(15, 13, 11); 
+    background-color: rgb(128, 79, 30); 
 }
 .container{
     width: 100%;
@@ -30,6 +30,12 @@ header{
     border-radius: 0.3em; 
    
 }
+
+#help-btn:hover {
+    background-color: rgb(150, 203, 25);
+    color: white;
+    transform: scale(1.09);
+  }
 #help-btn,a{
     text-decoration: none;
     color: black;
@@ -42,13 +48,19 @@ header{
     font-weight: bold;
     border-radius: 8px;
 }
+
+#cart-btn:hover {
+    background-color: rgb(150, 203, 25);
+    color: white;
+    transform: scale(1.09);
+}
 .food-container{
  display: flex;
  border: 3px solid rgba(23, 15, 4, 0.921);
  width: 70%;
  max-width: 600px;
  position: relative;
- background-color: rgb(227, 207, 207);
+ background-color: rgb(195, 186, 186);
  color: #5c0e0e;
  font-size: 1rem;
  margin: 0 auto;
@@ -96,6 +108,10 @@ img{
     font-weight: bold;
     cursor: pointer;
 }
+.buy-button:hover {
+    background-color: #d45815; 
+    transform: scale(1.15); 
+  }
 
 .buy-button:active {
     background-color: darkred;
@@ -114,55 +130,6 @@ img{
     position: relative;
 }
 
-
-/* .remove-button{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .remove-button{
-    display: block;
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 18px;
-    font-family: sans-serif;
-    text-decoration: none;
-    color: #333;
-    border: 2px solid #333;
-    letter-spacing: 2px;
-    text-align: center;
-    position: relative;
-    transition: all .35s;
-  }
-  
-  .remove-button span{
-    position: relative;
-    z-index: 2;
-  }
-  
-  .remove-button:after{
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #ff003b;
-    transition: all .35s;
-  }
-  
-  .remove-button:hover{
-    color: #fff;
-  }
-  
-  .remove-button:hover:after{
-    width: 100%;
-  } */
-
-
 .remove-button{
     position: absolute;
     right: 12px;
@@ -178,6 +145,11 @@ img{
 .remove-button:active{
 background-color: rgb(244, 14, 14);
 }
+
+.remove-button:hover {
+    background-color: red; 
+    transform: scale(0.85); 
+  }
 
 .cart-image{
     border-radius: 50%
